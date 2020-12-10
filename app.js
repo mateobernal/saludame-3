@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const path = require('path');
 const app = express();
-const routes = require('./src/routes/routes');
+const routes = require('./routes/routes');
 
 
 
@@ -22,15 +22,6 @@ app.set('view engine', '.hbs');
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-//global variables
-/*app.use((req, res, next) => {
-    res.locals.nombre = req.body.name
-    console.log(req.body.name)
-    next();
-});
-*/
-
 
 
 //routes
